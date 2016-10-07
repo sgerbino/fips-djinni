@@ -35,7 +35,7 @@ default_args = ("{"
                 "}")
 
 def generate(input, out_src, out_hdr, args = default_args):
-        if util.isDirty(version, [input]):
+        if util.isDirty(version, [input], []):
                 cmd = []
                 cmd.append(djinni)
                 cmd.append('--idl')
