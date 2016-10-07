@@ -33,7 +33,7 @@ default_args = yaml.load("{"
                          "}")
 
 def generate(input, out_src, out_hdr, args = default_args):
-                if util.isDirty(None, [input], []):
+                if util.isDirty(None, [input], [out_hdr]):
                                 cmd = []
                                 cmd.append(djinni)
                                 cmd.append('--idl')
